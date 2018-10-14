@@ -1,14 +1,12 @@
 ## FlashCards
 
 ### App Description
-`TODO://` This is a flashcard app that allows you to prepare for tests and quizzes in a fun way.
+This is a flashcard app that allows you to prepare for tests and quizzes in a fun way.
 
 ### App Walk-though
-`TODO://`
 
 <img src="http://g.recordit.co/iqIqbZMVpN.gif" width=200><br>
 
-`TODO://` 
 
 ## Required
 - [x] Create New Project in Xcode
