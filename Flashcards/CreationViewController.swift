@@ -13,6 +13,8 @@ class CreationViewController: UIViewController {
     var flashCardsController: ViewController!
     @IBOutlet weak var questionField: UITextField!
     @IBOutlet weak var answerField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
