@@ -28,9 +28,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+
         readSavedFlashcards()
-        
         if flashcards.count==0{
             updateFlashcard(question: "What is the capital of Peru?", answer: "Lima")
         } else {
@@ -95,6 +94,8 @@ class ViewController: UIViewController {
         updateNextPrevButtons()
         
         updateLabels()
+        
+        saveAllFlashcardstoDisk()
     }
     
     func updateLabels(){
@@ -134,6 +135,7 @@ class ViewController: UIViewController {
             }
             flashcards.append(contentsOf: savedCards)
             }
+        print("read saved flashcards")
         }
     }
         
