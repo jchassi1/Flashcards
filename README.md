@@ -1,4 +1,25 @@
-## FlashCards Lab 2
+## Lab 3
+
+### App Description
+This fully functional flashcard app will allow users to make custom flashcards that can be saved for future use even after the app is closed, which is useful for studying material for any subject.
+
+### App Walk-though
+`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
+
+<img src="YOUR_GIF_URL_HERE" width=200><br>
+
+`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
+
+## Required
+- [x] User can browse through multiple flashcards
+- [x] User can re-open the app and see previously created flashcards
+- [x] Push code to GitHub
+## Optional
+- [ ] User can delete a flashcard
+- [ ] User can edit existing flashcard
+- [ ] User can store multiple choice questions
+
+## Lab 2
 
 ### App Description
 This app allows users to create individual flashcards through adding custom questions and answers that can be used to study in an interactive way.
@@ -16,7 +37,7 @@ This app allows users to create individual flashcards through adding custom ques
 - [ ] User can edit existing flashcard
 - [ ] User can add multiple choice answers in the creation screen
 
-## FlashCards Lab 1
+## Lab 1
 
 ### App Description
 This is a flashcard app that allows you to prepare for tests and quizzes in a fun way.
