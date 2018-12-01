@@ -4,7 +4,7 @@
 This fully functional flashcard app will allow users to make custom flashcards that can be saved for future use even after the app is closed, which is useful for studying material for any subject.
 
 ### App Walk-though
-<img src="http://g.recordit.co/sJFCcYwxAx.gif" width=200><br>
+<img src="http://g.recordit.co/mjlYOBxsuC.gif" width=200><br>
 
 ## Required
 - [x] User can browse through multiple flashcards
