@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     var flashcards = [Flashcard]()
     
     var currentIndex = 0
+    var buttonPressed=""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,32 +51,82 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-        if (frontLabel.isHidden){
-            frontLabel.isHidden=false
-        } else {
-        frontLabel.isHidden=true
+        flipFlashcard()
     }
+    
+    func flipFlashcard(){
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            if (self.frontLabel.isHidden){
+                self.frontLabel.isHidden=false
+            } else {
+                self.frontLabel.isHidden=true
+            }
+        })
+        
+    }
+    
+    func animateCardOut(){
+        UIView.animate(withDuration: 0.2, animations: {
+            if (self.buttonPressed=="next"){
+                self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+            }
+            if (self.buttonPressed=="prev") {
+                self.card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+            }
+            
+            
+        }, completion: { finished in
+            self.updateLabels()
+            
+            //for running other animation
+            self.animateCardIn()
+    
+    })
+    }
+    
+    func animateCardIn(){
+        if (self.buttonPressed=="next"){
+        //starts transformation on the right side
+            card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        }
+        //starts transformation on left side (if prev button is instead selected)
+        if (self.buttonPressed=="prev"){
+            card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        
+        }
+        
+        //animates card by going back to original location
+        UIView.animate(withDuration: 0.2){
+            self.card.transform = CGAffineTransform.identity
+        }
+        
     }
     
     @IBAction func didTapOnNext(_ sender: Any) {
         //updating index
         currentIndex+=1
+        buttonPressed = "next"
         
         //updating labels according to index
-        updateLabels()
+       // updateLabels()
         
         //updating next+prev button functionality
         updateNextPrevButtons()
+        
+        animateCardOut()
     }
     
     @IBAction func didTapOnPrev(_ sender: Any) {
         currentIndex-=1
+        buttonPressed="prev"
         
         //updating Labels according to index
-        updateLabels()
+        // updateLabels()
         
         //updating next/prev buttons
         updateNextPrevButtons()
+        
+        animateCardOut()
     }
     
     
